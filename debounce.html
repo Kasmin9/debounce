@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debounce Example</title>
+</head>
+<body>
+    <input type="text" id="inputbox" placeholder="type `kasmin`" />
+    <script>
+        /* Define the function to call */
+        function theDev(value) {
+            document.write("The Dev function called with value: " + value);
+        }
+
+        /* Variables for debouncing */
+        let debounceTimer;
+        const inputBox = document.getElementById("inputbox");
+
+        inputBox.addEventListener("keyup", (event) => {
+            const value = event.target.value;
+
+            /* Check if the input matches `kasmin` */
+            if (value.toLowe
