@@ -21,4 +21,16 @@
             const value = event.target.value;
 
             /* Check if the input matches `kasmin` */
-            if (value.toLowe
+            if (value.toLowerCase() === 'kasmin') {
+                /* Clear any existing timer */
+                clearTimeout(debounceTimer);
+
+                /* Set a new timer */
+                debounceTimer = setTimeout(() => {
+                    theDev(value);
+                }, 300); /* Wait for 300 milliseconds of no typing */
+            }
+        });
+    </script>
+</body>
+</html>
